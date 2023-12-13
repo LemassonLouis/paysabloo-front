@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     getDomains().then(domains => setDomains(domains));
-  }, [domains]);
+  }, []);
 
   return (
     <>

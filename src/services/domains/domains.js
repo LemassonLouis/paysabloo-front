@@ -1,19 +1,23 @@
 import axios from "axios"
+import { getAuthHeader } from "../jwt/jwt";
 
 export default function getDomains() {
     return axios
         .get(process.env.REACT_APP_API_ADDR+ "/domains", {
             headers: {
-                Authorization: "bearer " + process.env.REACT_APP_API_TOKEN
+                Authorization: getAuthHeader()
+            },
+            params: {
+                populate: {
+                    activities: {
+                        populate: "images"
+                    }
+                }
             }
         })
         .then(response => {
-            const domains = response.data.data.map(element => {
-                const domain = element.attributes;
-                domain.id = element.id;
-                return domain;
-            });
-            return domains;
+            console.log("getDomains() response", response);
+            return response.data.data;
         })
         .catch(error => console.log("getDomains() error", error));
 }
