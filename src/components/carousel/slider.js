@@ -35,8 +35,12 @@ function Slider({ pictures }) {
       {length > 1 && (
         <>
           <span className='slider-counter'>{current + 1}/{length}</span>
-          <img src={arrowLeft} alt="Image précédente" className="left-arrow" onClick={prev} />
-          <img src={arrowRight} alt="Image suivante" className="right-arrow" onClick={next} />
+          <div className="left-arrow" onClick={prev}>
+            <img src={arrowLeft} alt="Image précédente" />
+          </div>
+          <div className="right-arrow" onClick={next}>
+            <img src={arrowRight} alt="Image suivante" />
+          </div>
         </>
       )}
     </div>
