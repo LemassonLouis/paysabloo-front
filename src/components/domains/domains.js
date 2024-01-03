@@ -7,7 +7,7 @@ function Domains({ domains }) {
     <>
       {domains.map(domain => {
         return (
-          <section key={domain.id}>
+          <section key={domain.id} className="marginCenter">
             <h2>{domain.title}</h2>
             <Activities activities={domain.activities || []} />
           </section>

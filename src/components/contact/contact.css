@@ -1,0 +1,25 @@
+.contact {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 20px;
+    color: #fff;
+    background-color: #247E38;
+    margin-bottom: -10px;
+}
+
+.contact>.informations {
+    width: 20%;
+}
+
+.contact>.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 30%;
+}

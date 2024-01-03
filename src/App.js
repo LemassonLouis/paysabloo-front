@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import getDomains from './services/domains/domains';
 
 import Domains from './components/domains/domains';
+import Contact from './components/contact/contact';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
 
       <main>
         <Domains domains={domains} />
+        <Contact />
       </main>
 
       <footer>
