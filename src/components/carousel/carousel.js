@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import "./slider.css";
+import "./carousel.css";
 
 import arrowLeft from "../../images/arrowLeft.svg";
 import arrowRight from "../../images/arrowRight.svg";
 import noImage from "../../images/no-image.jpg";
 
-function Slider({ pictures }) {
+function Carousel({ pictures }) {
   const [current, setCurrent] = useState(0);
   const length = pictures.length;
 
@@ -19,22 +19,22 @@ function Slider({ pictures }) {
   };
 
   return (
-    <div className="sliders">
+    <div className="carousel">
       {(!pictures || length) <= 0 && (
-        <div className='slides'>
-          <img src={noImage} className="slide-image" alt="No image available" />
-      </div>
+        <div>
+          <img src={noImage} className="carousel-image" alt="No image available" />
+        </div>
       )}
       {pictures.map((picture, index) => (
-        <div className={index === current ? 'slide-active' : 'slides'} key={index}>
+        <div className={index === current ? 'carousel-active' : ''} key={index}>
           {index === current && (
-            <img src={process.env.REACT_APP_BACK_ADDR + picture.url} className="slide-image" alt={picture.alternativeText} />
+            <img src={process.env.REACT_APP_BACK_ADDR + picture.url} className="carousel-image" alt={picture.alternativeText} />
           )}
         </div>
       ))}
       {length > 1 && (
         <>
-          <span className='slider-counter'>{current + 1}/{length}</span>
+          <span className='carousel-counter'>{current + 1}/{length}</span>
           <div className="left-arrow" onClick={prev}>
             <img src={arrowLeft} alt="Image précédente" />
           </div>
@@ -47,4 +47,4 @@ function Slider({ pictures }) {
   );
 }
 
-export default Slider;
+export default Carousel;

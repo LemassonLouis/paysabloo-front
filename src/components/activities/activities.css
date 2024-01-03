@@ -31,7 +31,7 @@ article>.informations>h3, article>.informations>p {
     width: 100%;
 }
 
-article>.sliders {
+article>.carousel {
     flex-basis: 40%;
     flex-grow: 1;
 }

@@ -1,4 +1,4 @@
-import Slider from "../carousel/slider";
+import Carousel from "../carousel/carousel";
 
 import "./activities.css";
 
@@ -12,7 +12,7 @@ function Activities({ activities }) {
               <h3>{activity.title}</h3>
               <p>{activity.description}</p>
             </div>
-            <Slider pictures={activity.images || []} />
+            <Carousel pictures={activity.images || []} />
           </article>
         )
       })}
