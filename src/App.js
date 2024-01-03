@@ -1,6 +1,10 @@
-import './App.css';
 import { useEffect, useState } from 'react';
+
 import getDomains from './services/domains/domains';
+
+import Domains from './components/domains/domains';
+
+import './App.css';
 
 function App() {
   const [domains, setDomains] = useState([]);
@@ -11,22 +15,17 @@ function App() {
 
   return (
     <>
-      <h1>PaysaBloo</h1>
-      {domains.map(domain => {
-        return (
-          <section key={domain.id}>
-            <h2>{domain.title}</h2>
-            {domain.activities.map(activity => {
-              return (
-                <article key={activity.id}>
-                  <h3>{activity.title}</h3>
-                  <p>{activity.description}</p>
-                </article>
-              )
-            })}
-          </section>
-        )
-      })}
+      <header>
+        <h1>PaysaBloo</h1>
+      </header>
+
+      <main>
+        <Domains domains={domains} />
+      </main>
+
+      <footer>
+        <p>Copyright</p>
+      </footer>
     </>
   );
 }

@@ -1,0 +1,139 @@
+.sliders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slide-active {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.left-arrow, .right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  width: 20px;
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+.slider-counter {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 1.5rem;
+    width: 35px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 1.5rem;
+    width: 35px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  .slide-image {
+    width: 90%;
+    height: 255px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 1.3rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 1.3rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  .slide-image {
+    width: 90%;
+    height: 255px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 1rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 1rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+
+  .slide-image {
+    width: 90%;
+    height: 255px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}

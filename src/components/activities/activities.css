@@ -1,0 +1,37 @@
+article {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+article:nth-child(odd) {
+    flex-direction: row;
+}
+
+article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+article>.informations {
+    box-sizing: border-box;
+    width: auto;
+    max-width: 60%;
+}
+
+article:nth-child(odd)>.informations {
+    padding-right: 20px;
+}
+
+article:nth-child(even)>.informations {
+    padding-left: 20px;
+}
+
+article>.informations>h3, article>.informations>p {
+    width: 100%;
+}
+
+article>.sliders {
+    flex-basis: 40%;
+    flex-grow: 1;
+}
