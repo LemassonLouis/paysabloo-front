@@ -16,6 +16,14 @@ function App() {
         return (
           <section key={domain.id}>
             <h2>{domain.title}</h2>
+            {domain.activities.map(activity => {
+              return (
+                <article key={activity.id}>
+                  <h3>{activity.title}</h3>
+                  <p>{activity.description}</p>
+                </article>
+              )
+            })}
           </section>
         )
       })}
