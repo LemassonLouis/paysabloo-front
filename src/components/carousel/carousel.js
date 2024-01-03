@@ -21,7 +21,7 @@ function Carousel({ pictures }) {
   return (
     <div className="carousel">
       {(!pictures || length) <= 0 && (
-        <div>
+        <div className='carousel-active'>
           <img src={noImage} className="carousel-image" alt="No image available" />
         </div>
       )}
